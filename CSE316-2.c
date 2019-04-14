@@ -60,23 +60,32 @@ int main()
 		{
 			for(j  = i ; j < n ; j++)
 			{
-				sum1 = sum1  + (a[j] - a[j+1]);
+				sum1 = sum1  + (-(a[j] - a[j+1]));
 			}	
 		}
 	}
 	
-	int last = a[n];
+	
+	sum2 = a[n] - a[0];
+	printf("%d",sum2);
+	
     for(i = 0 ; i < n+1 ; i++ )
 	{ 
-		if((a[i] != value) && (a[i] <= value))
+		if(a[i] == value)
 		{
 			for(j  = 0 ; j < i ; j++)
 			{
-				sum2 = -(last - a[j]);
-				sum2 = sum2  + (a[j] - a[j+1]);
+				if( a[j+1] == value )
+				{
+					sum2 = sum2;
+			    }    
+			    else
+			    {
+			   		sum2 = sum2  + (-(a[j] - a[j+1]));	
+				}
 			}	
 		}
 	}
-	printf("\n\nTotal distace travelled is: %d",((-sum1)+(-sum2)) ) ;
+	printf("\n\nTotal distace travelled is: %d",((sum1)+(sum2)) ) ;
 }
     
