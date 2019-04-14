@@ -66,8 +66,8 @@ int main()
 	}
 	
 	
-	sum2 = a[n] - a[0];
-	printf("%d",sum2);
+	//sum2 = a[n] - a[0]; used as checkpoint to see the difference between last and the first element.
+	//printf("%d",sum2);
 	
     for(i = 0 ; i < n+1 ; i++ )
 	{ 
