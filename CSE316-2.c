@@ -2,20 +2,29 @@
  
 int main()
 {
-   int a[100] ,position,i,j,n,temp,value,sum;
+   int a[100] ,position,i,j,n,temp,value,sum,cylinder;
    int sum1 = 0;
    int sum2;
    
-   printf("Enter the number of pending requests: ");
+   printf("Enter Total no. of cylinders in Disk: ");
+   scanf("%d",&cylinder);
+   
+   printf("\nEnter the number of pending requests: ");
    scanf("%d", &n);
  
    printf("\nEnter  pending requests: \n", n);
  
    for (i = 0; i < n; i++)
-   {
-      scanf("%d", &a[i]);
-   }
- 
+   	{
+   		scanf("%d", &a[i]);
+   		{
+   			if(a[i]>cylinder)
+   			{
+   				printf("Entered Request is Outbound of Disk...\nEnter Inbound values.");	
+			}
+		}
+	}
+	
    printf("\nEnter the current position of the head: ");
    scanf("%d", &value);
  
@@ -71,4 +80,3 @@ int main()
 	printf("\n\nTotal distace travelled is: %d",((-sum1)+(-sum2)) ) ;
 }
     
-
